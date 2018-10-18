@@ -1,0 +1,17 @@
+<h3>Repository Detail</h3>
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">{{repositoryDetail.name}}</h5>
+    </div>
+    <div class="card-body">        
+        <p class="card-text"><strong>Full Name: </strong> {{ repositoryDetail.full_name }}</p> 
+        <p class="card-text"><strong>Forks: </strong> {{ repositoryDetail.forks }}</p>
+        <p class="card-text"><strong>Open Issues: </strong> {{ repositoryDetail.open_issues }}</p>
+        <p class="card-text"><strong>Watchers: </strong> {{ repositoryDetail.watchers }}</p>
+        <p class="card-text"><strong>Score: </strong> {{ repositoryDetail.score }}</p>
+        <p class="card-text"><strong>Size: </strong> {{ repositoryDetail.size }}</p>
+        <p class="card-text"><strong>URL: </strong> <a href="http://{{ repositoryDetail.url }}"  target="_blank" >{{ repositoryDetail.url }}</a></p>
+   
+        <a class="btn btn-primary" routerLink="/search/{{params.name}}">Back to search Result</a>  
+    </div>
+  </div>

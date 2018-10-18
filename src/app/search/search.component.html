@@ -1,0 +1,28 @@
+<h2>Git Repository Search</h2>
+
+    <div class="form-group">
+        <label for="repositoryName">Repository Name:</label>
+        <input class="form-control" #repositoryName >       
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+            <button class="btn btn-primary" (click)="searchRepo(repositoryName.value)">Search</button>
+
+        </div>
+        <div class="col-md-3">
+          <span><strong>Total Count: </strong>{{total}}</span>
+        </div>
+      </div>
+     
+
+  <div>
+    <div class="card" *ngFor="let item of repoItems">
+      <div class="card-header">
+          <h5 class="card-title">{{item.name}}</h5>
+      </div>
+      <div class="card-body">         
+          <p class="card-text">{{item.description}}</p>
+          <a [routerLink]="['/details' , {id: item.id, name: repositoryName.value}]">Details</a>
+      </div>
+    </div>
+  </div>
